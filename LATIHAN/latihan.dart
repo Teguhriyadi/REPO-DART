@@ -1,20 +1,22 @@
 import 'dart:io';
-void main() {
 
+void main() {
   List<String> daftarMatkul = <String>[];
 
-  print("Masukkan Jumlah Mata Kuliah : ");
+  stdout.write("Masukkan Jumlah Mata Kuliah : ");
   String? jumlahMatakuliah = stdin.readLineSync();
 
   var jumlah = int.parse(jumlahMatakuliah!);
   for (var i = 1; i <= jumlah; i++) {
-    print("Mata Kuliah - $i");
+    stdout.write("Mata Kuliah = $i : ");
     String? mk = stdin.readLineSync();
     daftarMatkul.add(mk.toString());
   }
 
+  print("");
+  print("Daftar Mata Kuliah : ");
   for (var m in daftarMatkul) {
-    print("Mata Kuliah $m");
+    print("Mata Kuliah : $m");
   }
-
+  print("");
 }
